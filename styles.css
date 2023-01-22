@@ -58,8 +58,13 @@ h2 {
 }
 
 ul {
-  text-align: initial;
+	text-align: initial;
 }
+
+a {
+	text-decoration: none;
+}
+
 
 .picture-frame {
 	float: left;
@@ -69,9 +74,10 @@ ul {
 .side-text h1 {
 	margin: 0px;
 }
-.side-text .texto {
+.side-text p {
 	font-family: Sofia Sans;
 	font-size: 121%;
+	margin-top: 0px;
 }
 
 .about-me {
@@ -112,6 +118,11 @@ div.buttons {
 	cursor:pointer;
 }
 
+#descriptionWrapper {
+	min-height: 359px;
+	margin-bottom: 1%;
+}
+
 .description {
 	background: var(--charcoal);
 	font-size: 135%;
@@ -132,17 +143,17 @@ div.buttons {
 }
 
 @media only screen and (max-width: 730px) {
-    .card-container {
-        max-width: 80%;
-        margin: auto;
-    }
+	.card-container {
+		max-width: 80%;
+		margin: auto;
+	}
 }
 
 @media only screen and (max-width: 400px) {
-    .card-container {
-        max-width: 95%;
-        margin: 5px;
-    }
+	.card-container {
+		max-width: 95%;
+		margin: 5px;
+	}
 }
 
 
@@ -190,4 +201,47 @@ div.buttons {
 		display: block;
 		margin: auto;
 	}
+}
+
+footer {
+	background: var(--charcoal);
+	--min-height: 53px;
+	min-height: var(--min-height);
+}
+
+footer p {
+	margin: 0px;
+	display: inline;
+	font-size: 131%;
+	color: #000;
+	font-weight: bold;
+	line-height: var(--min-height);
+}
+
+footer svg {
+	margin-bottom: 2px;
+	color: #000;
+}
+
+#email {
+	float: right;
+	margin: 0px 2%;
+}
+
+#email p {
+	font-size: 120%;
+}
+
+footer #email svg {
+	margin-bottom: 0px;
+}
+
+.redes {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: auto;
+	float: left;
+	height: var(--min-height);
+	grid-template-rows: var(--min-height);
+	margin: 0px 2%;
 }
