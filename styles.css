@@ -10,7 +10,7 @@
 
 body {
 	font-family: sans-serif;
-	background-color: var(--charcoal);
+	background-color: var(--persian-green);
 	margin: 0px;
 }
 
@@ -22,6 +22,7 @@ p {
 	min-height: 128px;
 	height: 220px;
 	padding-top: 1%;
+	background: var(--charcoal);
 }
 
 .card-container {
@@ -44,7 +45,7 @@ p {
 	padding: 4.1% 0px;
 }
 
-p, h2, div.button {
+p, h2 {
 	color: #ffffff;
 }
 
@@ -55,9 +56,10 @@ p, h2, div.button {
 
 
 .about-me {
-  background-color: var(--persian-green);
-  height: 60px;
-  line-height: 60px;
+	background-color: var(--persian-green);
+	--height: 50px;
+	height: var(--height);
+	line-height: var(--height);
 }
 
 h2 {
@@ -69,5 +71,46 @@ h2 {
 
 div.buttons {
 	display:grid;
-	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 17px;
+	margin: 9px;
+	--height: 35px;
+	grid-template-rows: var(--height);
+}
+
+
+div.button {
+	border-style: solid;
+	border-color: var(--burnt-sienna);
+	background-color: var(--maize-crayola);
+	border-radius: 10px;
+	line-height: var(--height);
+	text-align: center;
+	color: #000;
+	font-size: 150%;
+	height: var(--height);
+}
+
+
+.button:hover {
+	filter: brightness(80%);
+}
+
+.description {
+	background: var(--charcoal);
+	font-size: 135%;
+	margin: 2%;
+}
+.description p {
+	float: left;
+	max-width: 60%;
+}
+.rightside {
+	float: right;
+}
+.description img {
+	max-width: 27%;
+	margin-right: 37px;
+	border-style: solid;
+	border-width: 4px;
 }
