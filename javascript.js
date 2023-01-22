@@ -13,9 +13,10 @@ window.addEventListener("load", (event) => {
 	reset("Proyectos")
 
 	function toggleOthers(evt){
-
 		if (evt.target.tagName=="path"){
 			targetId = evt.target.parentNode.parentNode.id
+		} else if (evt.target.tagName=="svg") {
+			targetId = evt.target.parentNode.id
 		} else {
 			targetId = evt.target.id
 		}
