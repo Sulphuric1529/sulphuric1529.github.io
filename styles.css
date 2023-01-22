@@ -105,6 +105,7 @@ div.buttons {
 
 .button:hover {
 	filter: brightness(80%);
+	cursor:pointer;
 }
 
 .description {
@@ -152,6 +153,10 @@ div.buttons {
 	div.buttons {
 		grid-template-columns: 1fr;
 		grid-template-rows: 50px 50px 50px 50px;
+	}
+	
+	.description {
+		margin: initial;
 	}
 	
 	.description img {
