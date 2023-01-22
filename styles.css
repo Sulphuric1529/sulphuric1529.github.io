@@ -50,24 +50,31 @@ p, h2 {
 	color: #ffffff;
 }
 
+h2 {
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: var(--obsidian);
+	font-size: 30px;
+}
+
 .picture-frame {
 	float: left;
 	margin-right: 2.5%;
 }
 
+.side-text h1 {
+	margin: 0px;
+}
+.side-text p {
+	font-family: Sofia Sans;
+	font-size: 121%;
+}
 
 .about-me {
 	background-color: var(--persian-green);
 	--height: 50px;
 	height: var(--height);
 	line-height: var(--height);
-}
-
-h2 {
-	text-align: center;
-	text-decoration: underline;
-	text-decoration-color: var(--obsidian);
-	font-size: 30px;
 }
 
 div.buttons {
@@ -80,7 +87,7 @@ div.buttons {
 }
 
 
-div.button {
+.button {
 	border-style: solid;
 	border-color: var(--burnt-sienna);
 	background-color: var(--maize-crayola);
@@ -92,6 +99,9 @@ div.button {
 	height: var(--height);
 }
 
+.button svg {
+	margin: -1px 6px;
+}
 
 .button:hover {
 	filter: brightness(80%);
@@ -106,14 +116,14 @@ div.button {
 	float: left;
 	max-width: 60%;
 }
-.rightside {
-	float: right;
-}
 .description img {
 	max-width: 27%;
 	margin-right: 37px;
 	border-style: solid;
 	border-width: 4px;
+}
+.rightside {
+	float: right;
 }
 
 @media only screen and (max-width: 730px) {
@@ -171,19 +181,4 @@ div.button {
 		display: block;
 		margin: auto;
 	}
-}
-
-
-
-.side-text h1 {
-	margin: 0px;
-}
-.side-text p {
-	font-family: Sofia Sans;
-	font-size: 121%;
-}
-
-
-.button svg {
-  margin: -1px 6px;
 }
