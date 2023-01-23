@@ -120,13 +120,17 @@ div.buttons {
 
 #descriptionWrapper {
 	min-height: 359px;
-	margin-bottom: 1%;
+	padding-bottom: 1%;
+	margin-bottom: 5px;
+	background: var(--charcoal);
 }
 
 .description {
 	background: var(--charcoal);
 	font-size: 135%;
 	margin: 2%;
+	overflow: hidden;
+	padding-top: 1%;
 }
 .description .texto {
 	float: left;
@@ -142,6 +146,55 @@ div.buttons {
 	float: right;
 }
 
+footer {
+	background: var(--charcoal);
+	overflow: hidden;
+	padding: 1% 0px;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+footer p {
+	margin: 0px;
+	display: inline;
+	font-size: 131%;
+	color: #000;
+	font-weight: bold;
+}
+
+footer svg {
+	margin-bottom: 2px;
+	color: #000;
+}
+
+#email {
+	float: right;
+	margin: 0px 2%;
+}
+
+#email p {
+	font-size: 120%;
+}
+
+footer #email svg {
+	margin-bottom: 0px;
+}
+
+.redes {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: auto;
+	float: left;
+	margin: 0px 2%;
+}
+
+@media only screen and (max-width: 850px) {
+	div.buttons {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 50px 50px;
+	}
+}
+
 @media only screen and (max-width: 730px) {
 	.card-container {
 		max-width: 80%;
@@ -149,18 +202,14 @@ div.buttons {
 	}
 }
 
-@media only screen and (max-width: 400px) {
-	.card-container {
-		max-width: 95%;
-		margin: 5px;
-	}
-}
-
-
-@media only screen and (max-width: 850px) {
-	div.buttons {
+@media only screen and (max-width: 660px) {
+	.redes {
+		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 50px 50px;
+		grid-template-rows: 1fr 1fr;
+		width: auto;
+		float: left;
+		margin: 0px 2%;
 	}
 }
 
@@ -189,7 +238,26 @@ div.buttons {
 		text-align: center;
 		padding: 21px 0px;
 	}
+
+	.redes {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		margin-left: 25%;
+	}
+
+	footer #email {
+		width: 75%;
+		margin-right: 12.5%;
+		text-align: center;
+	}
 	
+}
+
+@media only screen and (max-width: 400px) {
+	.card-container {
+		max-width: 95%;
+		margin: 5px;
+	}
 }
 
 @media only screen and (max-width: 330px) {
@@ -201,47 +269,9 @@ div.buttons {
 		display: block;
 		margin: auto;
 	}
-}
 
-footer {
-	background: var(--charcoal);
-	--min-height: 53px;
-	min-height: var(--min-height);
-}
-
-footer p {
-	margin: 0px;
-	display: inline;
-	font-size: 131%;
-	color: #000;
-	font-weight: bold;
-	line-height: var(--min-height);
-}
-
-footer svg {
-	margin-bottom: 2px;
-	color: #000;
-}
-
-#email {
-	float: right;
-	margin: 0px 2%;
-}
-
-#email p {
-	font-size: 120%;
-}
-
-footer #email svg {
-	margin-bottom: 0px;
-}
-
-.redes {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: auto;
-	float: left;
-	height: var(--min-height);
-	grid-template-rows: var(--min-height);
-	margin: 0px 2%;
+	footer #email {
+		margin-right: initial;
+		width: initial;
+	}
 }
